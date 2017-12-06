@@ -1,1 +1,6 @@
-
+language: node_js
+node_js:
+ - "node"
+ script:
+   -back/test/test.js
+   -front/test/test.js
