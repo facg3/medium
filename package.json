@@ -1,0 +1,28 @@
+{
+  "name": "mynews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:watch": "nodemon back/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facg3/mynews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facg3/mynews/issues"
+  },
+  "homepage": "https://github.com/facg3/mynews#readme",
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.5"
+  },
+  "dependencies": {}
+}
