@@ -4,6 +4,9 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.interface {
   background: url('http://ifisa.info/wp-content/uploads/2016/05/news.jpg');
   background-size: auto;
   background-position: center;
