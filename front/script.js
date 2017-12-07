@@ -26,11 +26,11 @@ button.addEventListener('click', function(event) {
   xhr.send(name);
 });
 
+
+console.log(response);
 function createArticles(response){
   for (var i = 0; i < response.length; i++) {
-    // document.getElementByTagName('interface').style.display = 'hidden';
-    // document.getElementById('interface').style.visibility.hidden;
-    console.log("samara",response[1].author);
+    console.log("samar: ",response[1].author);
     var div = document.createElement('div');
     var img = document.createElement('img');
     img.src = response[i].urlToImage;
@@ -47,22 +47,12 @@ function createArticles(response){
     div.appendChild(description);
     var hr = document.createElement('hr');
     div.appendChild(hr);
-    interface.appendChild(div);
-<<<<<<< HEAD
+  interface.appendChild(div);
   }
-
-
 }
-//
 function removeArticles() {
   document.getElementById('interface').innerHTML = '';
   document.getElementById('interface').style.visibility.hidden;
-}
-=======
-   interface.appendChild('<hr>');
-  }
 
-  function removeArticles() {
-    interface.innerHTML = '';
 }
->>>>>>> a5dd4fa675e34b654df474ffa4c2003577290f90
+
