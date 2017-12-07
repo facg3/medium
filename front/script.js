@@ -2,8 +2,6 @@ const input = document.getElementById('input');
 var button = document.getElementById('search');
 var interface = document.getElementById('interface');
 var response = {};
-// var leftDiv = document.createElement("div");
-// var rightDiv = document.createElement("div");
 
 button.addEventListener('click', function(event) {
   var name = input.value;
@@ -17,9 +15,6 @@ button.addEventListener('click', function(event) {
         removeArticles();
         createArticles(response);
       }
-      // createArticles(response);
-      // console.log("date",Date.now);
-      // console.log('sdsdsdsds',typeof response);
     }
   }
   xhr.open("POST", "/mynews");
@@ -28,8 +23,6 @@ button.addEventListener('click', function(event) {
 
 function createArticles(response){
   for (var i = 0; i < response.length; i++) {
-    // document.getElementByTagName('interface').style.display = 'hidden';
-    // document.getElementById('interface').style.visibility.hidden;
     console.log("samara",response[1].author);
     var div = document.createElement('div');
     var img = document.createElement('img');
@@ -48,21 +41,10 @@ function createArticles(response){
     var hr = document.createElement('hr');
     div.appendChild(hr);
     interface.appendChild(div);
-<<<<<<< HEAD
   }
-
-
 }
-//
+
 function removeArticles() {
   document.getElementById('interface').innerHTML = '';
   document.getElementById('interface').style.visibility.hidden;
 }
-=======
-   interface.appendChild('<hr>');
-  }
-
-  function removeArticles() {
-    interface.innerHTML = '';
-}
->>>>>>> a5dd4fa675e34b654df474ffa4c2003577290f90
