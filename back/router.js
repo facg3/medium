@@ -42,15 +42,17 @@ function myNewsHandler(req, res) {
   var input;
   req.on('data', function(chunkOfData) {
     input = chunkOfData.toString();
-    console.log(input);
-    console.log("aaaaaaaaa");
     input = input.split(' ').join('+');
   }).on('error', function() {
     res.writeHead(404, 'content-Type: text/html');
     res.end('<h1>Error 404: Page Not Found</h1>')
   }).on('end', function() {
-    var d = new Date();
-    const link = `https://newsapi.org/v2/everything?apiKey=5613a9a7ed2d47edafd0c5d7350c2d28&q=${input}&from=${d}`;
+    var date = new Date();
+    date = date.toISOString().substring(0,10);
+    // console.log('date: ',date.toISOString().substring(0,10));
+    // date = date.toString().substring(0,10);
+    // console.log('date modified:', date);
+    const link = `https://newsapi.org/v2/everything?apiKey=5613a9a7ed2d47edafd0c5d7350c2d28&q=${input}&from=2017-01-01`;
     request(link, (err, response) => {
       if (err) {
         console.log(err);
@@ -65,3 +67,4 @@ function myNewsHandler(req, res) {
 }
 
 module.exports = router;
+
