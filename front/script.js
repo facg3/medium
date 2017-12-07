@@ -45,10 +45,24 @@ function createArticles(response){
     var description = document.createElement('p');
     description.innerHTML= response[i].description;
     div.appendChild(description);
+    var hr = document.createElement('hr');
+    div.appendChild(hr);
     interface.appendChild(div);
+<<<<<<< HEAD
+  }
+
+
+}
+//
+function removeArticles() {
+  document.getElementById('interface').innerHTML = '';
+  document.getElementById('interface').style.visibility.hidden;
+}
+=======
    interface.appendChild('<hr>');
   }
 
   function removeArticles() {
     interface.innerHTML = '';
 }
+>>>>>>> a5dd4fa675e34b654df474ffa4c2003577290f90
