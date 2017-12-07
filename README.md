@@ -12,7 +12,7 @@ Yahya Albarrawi.
 
 Dalal Saleem .
 
-Samar Fayez .
+Samar F. Aljazzar
 
 
 # User Stories:
