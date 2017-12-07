@@ -49,8 +49,8 @@ function myNewsHandler(req, res) {
     res.writeHead(404, 'content-Type: text/html');
     res.end('<h1>Error 404: Page Not Found</h1>')
   }).on('end', function() {
-    // req data from news api
-    const link = `https://newsapi.org/v2/everything?apiKey=5613a9a7ed2d47edafd0c5d7350c2d28&q=${input}&from=2017-12-05`;
+    var d = new Date();
+    const link = `https://newsapi.org/v2/everything?apiKey=5613a9a7ed2d47edafd0c5d7350c2d28&q=${input}&from=${d}`;
     request(link, (err, response) => {
       if (err) {
         console.log(err);
